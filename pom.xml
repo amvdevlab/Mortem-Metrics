@@ -65,7 +65,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
 		</dependency>
+<<<<<<< HEAD
 	
+=======
+		<dependency>
+    	<groupId>me.paulschwarz</groupId>
+    	<artifactId>spring-dotenv</artifactId>
+    	<version>4.0.0</version>
+		</dependency>
+>>>>>>> b0d2e87 (chore: Added database connection and .env)
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
