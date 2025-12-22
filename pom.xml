@@ -66,6 +66,7 @@
 			<artifactId>spring-boot-starter-webmvc</artifactId>
 		</dependency>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
 		<dependency>
@@ -74,6 +75,13 @@
     	<version>4.0.0</version>
 		</dependency>
 >>>>>>> b0d2e87 (chore: Added database connection and .env)
+=======
+	<dependency>
+		<groupId>io.github.cdimascio</groupId>
+		<artifactId>dotenv-java</artifactId>
+		<version>3.0.0</version>
+	</dependency>
+>>>>>>> 29edff4 (Build and Add repository interfaces for entities)
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
