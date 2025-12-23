@@ -34,6 +34,7 @@ build/
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Local Spring Profile ###
 application-local.properties
 
@@ -51,3 +52,8 @@ application-prod.properties
 ### Environment Variables ###
 .env
 >>>>>>> b0d2e87 (chore: Added database connection and .env)
+=======
+### Local Spring Profile ###
+application-local.properties
+application-dev.properties
+>>>>>>> 6a4b0df (chore: Fix hierarchy of variables and add profile)
