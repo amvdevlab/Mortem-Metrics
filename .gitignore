@@ -33,5 +33,6 @@ build/
 .vscode/
 
 
-### Environment Variables ###
-.env
+### Local Spring Profile ###
+application-local.properties
+application-dev.properties
