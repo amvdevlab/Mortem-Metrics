@@ -31,3 +31,18 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Local Spring Profile ###
+application-local.properties
+
+application-dev.properties
+**/application-dev.properties
+
+### Production credentials (never commit these) ###
+application-prod.properties
+**/application-prod.properties
+
+### Any properties file with "secret" or "local" in the name ###
+*secret*.properties
+*local*.properties
