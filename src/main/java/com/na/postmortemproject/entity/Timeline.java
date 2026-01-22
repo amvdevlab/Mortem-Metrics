@@ -34,7 +34,7 @@ public class Timeline {
   @Column(name="timeline_content", nullable=false, columnDefinition="TEXT")
   private String timelineContent;
 
-  @Column(name="file_metadata", columnDefinition="JSONB")
+  @Column(name="file_metadata", columnDefinition="TEXT")
   private String fileMetadata;
 
   @Column(name="created_at", nullable=false, updatable=false)

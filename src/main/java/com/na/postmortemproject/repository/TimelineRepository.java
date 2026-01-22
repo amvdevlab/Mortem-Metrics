@@ -10,5 +10,5 @@ public interface TimelineRepository extends JpaRepository<Timeline, Long>{
   
   // Get all timelines sorted by creation date (newest first)
   // Supports the History tab on the Frontend UI
-  List<Timeline> findALlByOrderByCreatedAtDesc();
+  List<Timeline> findALLByOrderByCreatedAtDesc();
 }
