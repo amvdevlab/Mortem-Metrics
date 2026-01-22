@@ -1,22 +1,15 @@
-# Upgrades to be Completed
+# VERSION2 
 
-## Database
+This document is for future improvements, maintenance, and bug fixes.
+### Database
 
-### Object Reference
+#### Timeline.java
 
-```
-private Integer createdByUserId
-```
+Add an `updated_at` attribute for editable markdown timelines and storage.   
+**Why**: Support for timeline markdown re-generation feature.
 
-**Improvement**:
-Convert this to a `@ManytoOne` relationship with a User entity.
-This allows the ability to pull the user's name or email directly from the incident without a second database query.
+#### TimelineRepository.java
 
-### Log Level
-
-Change `logLevel` from a `String` to an `Enum`.
-This ensures no one saves "Potato" as a logLevel.
-
-### Optimized Query
-
-Add indexes to improve query performances. For the @Table annotation, add indexes for frequently queried fields within the entity directory.
+- Add database index on `created_at` column for optimized sorting queries
+- **Why**: Improve performance of `findAllByOrderByCreatedAtDesc()` as dataset grows
+- **Implementation**: Add `@Index` annotation to `Timeline.java` entity
