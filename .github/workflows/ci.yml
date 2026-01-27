@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - main
-      - christmas_sprint
+      - file-parsing
 
 jobs:
   build-and-test:
