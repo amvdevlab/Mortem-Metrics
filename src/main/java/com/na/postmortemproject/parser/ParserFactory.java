@@ -23,11 +23,11 @@ public class ParserFactory {
     FileParser parser =  switch (baseType) {
 
       case "text/csv", "application/csv" -> new CsvParser();
-
+      case "application/json", "text/json" -> new JsonParser();
 
 
       default -> throw new UnsupportedOperationException(
-        "Unsupported file type: " + contentType + ". Currently only CSV is supported"
+        "Unsupported file type: " + contentType + ". Currently supported: CSV, JSON"
       );
     };
     
