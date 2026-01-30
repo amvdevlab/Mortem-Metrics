@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import com.na.postmortemproject.util.ContentTypeMapper;
 @Service
 public class FileStorageService {
 
@@ -63,8 +64,8 @@ public class FileStorageService {
 
             // Handle content type (default to binary if null)
             String contentType = file.getContentType();
-            if (contentType == null || contentType.isBlank()) {
-                contentType = "application/octet-stream";
+            if (contentType == null || contentType.isBlank() || "application/octet-stream".equalsIgnoreCase(contentType.trim())) {
+                contentType = ContentTypeMapper.getContentTypeForFilename(originalFilename);
             }
 
             // Upload to Supabase Storage
