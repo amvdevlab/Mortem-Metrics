@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 import com.na.postmortemproject.parser.dto.ParseResult;
@@ -118,10 +119,14 @@ class JsonParserTest {
         // When: Parse empty JSON
         ParseResult result = jsonParser.parse(input, "empty.json", "application/json", 2L);
         
+        if (!result.isParseSuccess()) {
+            fail("Empty JSON object should be valid. Error: " + result.getErrorMessage());
+        }
+        
         // Then: Should succeed (empty object is valid JSON)
-        assertTrue(result.isParseSuccess(), "Empty JSON object should be valid");
         assertNotNull(result.getExtractedText());
-        assertTrue(result.getExtractedText().contains("{}") || result.getExtractedText().trim().equals("{}"));
+        String normalized = result.getExtractedText().replaceAll("\\s+", "");
+        assertTrue(normalized.equals("{}"), "Extracted text should represent empty JSON. Got: " + result.getExtractedText());
     }
 
     @Test
