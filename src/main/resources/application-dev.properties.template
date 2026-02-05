@@ -8,3 +8,7 @@ spring.datasource.password=YOUR_DATABASE_PASSWORD
 supabase.url=https://YOUR_PROJECT_ID.supabase.co
 supabase.key=YOUR_SERVICE_ROLE_KEY
 supabase.storage.bucket=incident-attachments
+
+# Text reducer for Gemini context
+postmortem.text-reducer.compression-level=light
+postmortem.text-reducer.max-tokens=900000
