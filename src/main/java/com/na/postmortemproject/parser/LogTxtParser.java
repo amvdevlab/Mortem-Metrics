@@ -21,7 +21,7 @@ public class LogTxtParser implements FileParser {
 
         // Check if file is empty
         if (bytes.length == 0) {
-          return ParseResult.failure(fileName, fileType, fileSize, "File is emtpy");
+          return ParseResult.failure(fileName, fileType, fileSize, "File is empty");
         }
 
         // Convert bytes to UTF-8 string
