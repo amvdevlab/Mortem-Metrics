@@ -33,9 +33,14 @@ build/
 .vscode/
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 ### Local Spring Profile ###
 application-local.properties
+<<<<<<< HEAD
 
+=======
+>>>>>>> c1539af (chore(security): add CI/CD pipeline and test infra)
 application-dev.properties
 **/application-dev.properties
 
@@ -45,4 +50,17 @@ application-prod.properties
 
 ### Any properties file with "secret" or "local" in the name ###
 *secret*.properties
+<<<<<<< HEAD
 *local*.properties
+=======
+### Environment Variables ###
+.env
+>>>>>>> b0d2e87 (chore: Added database connection and .env)
+=======
+### Local Spring Profile ###
+application-local.properties
+application-dev.properties
+>>>>>>> 6a4b0df (chore: Fix hierarchy of variables and add profile)
+=======
+*local*.properties
+>>>>>>> c1539af (chore(security): add CI/CD pipeline and test infra)
